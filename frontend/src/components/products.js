@@ -31,7 +31,7 @@ const ProductsGrid = () => {
           <Row>
             {products ? (
               products.map(el => (
-                <Col md={6} lg={3}>
+                <Col md={6} >
                   <Card
                     className="mx-3 my-3 border-0"
                     style={{ width: "18rem" }}

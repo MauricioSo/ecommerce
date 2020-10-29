@@ -8,9 +8,11 @@ const ordersRoute = require("./routes/orderRoute");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
-
+const path = require("path");
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.use(cors());
 dotenv.config();
+
 //connect to db
 
 mongoose.connect(process.env.DB_CONNECT, () => {
